@@ -1,1 +1,7 @@
-# jetpack-compose
+# Projetos de Estudos sobre Jetpack Compose
+
+
+## Links de estudos:
+
+documentacao oficial do android
+https://developer.android.com/docs?hl=pt-br&authuser=1
