@@ -3,8 +3,8 @@
 
 ## Links de estudos:
 
-documentacao oficial do android:
+* documentacao oficial do android:
 https://developer.android.com/docs?hl=pt-br&authuser=1
 
-documentacao da ferramente compose:
+* documentacao da ferramenta compose:
 https://developer.android.com/jetpack/compose?hl=pt-br
