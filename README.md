@@ -8,3 +8,6 @@ https://developer.android.com/docs?hl=pt-br&authuser=1
 
 * documentacao da ferramenta compose:
 https://developer.android.com/jetpack/compose?hl=pt-br
+
+* Canal Programador de Elite:
+https://www.youtube.com/@progdeelite
