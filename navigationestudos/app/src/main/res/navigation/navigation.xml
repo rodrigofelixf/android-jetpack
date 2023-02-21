@@ -11,14 +11,14 @@
         tools:layout="@layout/fragment_first"
         android:label="FirstFragment" >
         <action
-            android:id="@+id/go_to_secondFragment2"
-            app:destination="@id/secondFragment2"
+            android:id="@+id/go_to_secondFragment"
+            app:destination="@id/secondFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/secondFragment2"
-        android:name="br.com.dio.navigation_estudos.SecondFragment"
+        android:id="@+id/secondFragment"
+        android:name="br.com.dio.navigation_estudos.fragments.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
@@ -26,5 +26,8 @@
             app:destination="@id/firstFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="user"
+            app:argType="br.com.dio.navigation_estudos.model.User" />
     </fragment>
 </navigation>

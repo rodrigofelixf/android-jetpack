@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.dio.navigation_estudos.R
 import br.com.dio.navigation_estudos.databinding.FragmentFirstBinding
+import br.com.dio.navigation_estudos.model.User
+
 
 class FirstFragment : Fragment() {
     private var _binding: FragmentFirstBinding? = null
@@ -22,7 +24,11 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.textView1.setOnClickListener {
-            findNavController().navigate(R.id.go_to_secondFragment2)
+            val action = FirstFragmentDirections.goToSecondFragment(user = User(
+                name = "Rodrigo",
+                age = 28
+            ))
+            findNavController().navigate(action)
         }
 
     }
