@@ -1,21 +1,20 @@
 package br.com.dio.lifecycle
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
+import androidx.activity.viewModels
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import br.com.dio.lifecycle.databinding.ActivityMainBinding
+import br.com.dio.lifecycle.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    private var counter = 0
+    private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +24,13 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        binding.counter.text = counter.toString()
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
 
         binding.fab.setOnClickListener {
-            counter++
-            binding.counter.text = counter.toString()
+            //TODO
         }
     }
 

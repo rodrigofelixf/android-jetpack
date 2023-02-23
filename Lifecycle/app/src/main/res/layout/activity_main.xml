@@ -20,13 +20,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
-        android:id="@+id/counter"
-        android:layout_width="match_parent"
-        tools:text="100"
-        style="@style/TextAppearance.MaterialComponents.Headline2"
-        android:gravity="center"
-        android:layout_height="match_parent"/>
+    <include layout="@layout/content_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
